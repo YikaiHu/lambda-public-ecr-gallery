@@ -1,15 +1,27 @@
-# Welcome to your CDK TypeScript project
+# AWS Lambda Deployment with ECR Public Gallery using CDK & CloudFormation
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`LambdaPublicEcrGalleryStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+This repository provides the source code and automation for deploying an AWS Lambda function using an image from the ECR Public Gallery, leveraging AWS CDK and CloudFormation. It automates pulling the image from the public ECR and pushing it to a private ECR repository using CodeBuild and a CloudFormation custom resource.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+For a detailed explanation of this process, check out the accompanying blog post: [How to Deploy AWS Lambda with an Image from ECR Public Gallery using CDK & CloudFormation](https://medium.com/@yikaihu121/how-to-deploy-aws-lambda-with-an-image-from-ecr-public-gallery-using-cdk-cloudformation-86cc3ddf6530).
 
-## Useful commands
+## Prerequisites
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+Make sure you have the following installed:
+
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+- [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/cli.html)
+- [Node.js](https://nodejs.org/) (for CDK and npm)
+
+## Getting Started
+
+### Step 1: Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 2: Deploy the Stack
+
+```bash
+npx cdk deploy
+```
